@@ -78,7 +78,7 @@ module.exports = {
         "available on live with an non-guaranteed version. Fix it by adding the package to the dependencies " +
         "in your package.json.",
       from: {
-        pathNot: "./src/storybookSetup.tsx"
+        pathNot: "^src/storybookSetup.tsx"
       },
       to: {
         dependencyTypes: [
