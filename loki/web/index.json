@@ -1,0 +1,13 @@
+{
+  "requireReference": true,
+  "configurations": {
+    "chrome": {
+      "target": "chrome.docker",
+      "width": 800,
+      "height": 800,
+      "deviceScaleFactor": 1,
+      "mobile": false,
+      "fitWindow": false
+    }
+  }
+}
