@@ -1,0 +1,26 @@
+name: Used By
+
+on: [push]
+
+jobs:
+  cremalab-app-web:
+    name: cremalab/app-web
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm pack
+      - uses: actions/checkout@v2
+        with:
+          repository: cremalab/app-web
+          path: app-web
+          ref: develop
+      - run:
+          cd app-web &&
+          npm i ../cremalab-app-config-*.tgz &&
+          npm i
+      - run:
+          cd app-web &&
+          npm run test:ci
