@@ -1,5 +1,25 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":semanticCommitType(fix)"
+  ],
+  "branchPrefix": "develop-renovate-",
+  "prCreation": "not-pending",
+  "labels": [
+    "maintenance"
+  ],
+  "packageRules": [
+    {
+      "updateTypes": ["major"],
+      "automerge": false,
+      "reviewers": [
+        "roblafeve",
+        "blaketarter"
+      ]
+    },
+    {
+      "updateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
   ]
 }
