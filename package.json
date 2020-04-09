@@ -33,7 +33,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "4.2.3",
+    "husky": "4.2.4",
     "husky-add-issue-tracker": "0.0.9"
   }
 }
